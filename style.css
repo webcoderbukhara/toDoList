@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: linear-gradient(70deg, #6ff76a65, #2bffed83);
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+body .container{
+    position: relative;
+    min-width: 350px;
+    max-width: 600px;
+    width: 50vw;
+    min-height: 50vh;
+    max-height: 75vh;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: auto;
+    box-shadow: 0 0 .5rem #888;
+    
+}
+.container::-webkit-scrollbar {
+    width: 0;
+  }
+body .container .todo_title {
+    min-width: 350px;
+    max-width: 600px;
+    width: 50vw;
+    position: fixed;
+    height: 25vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    letter-spacing: 1px;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-image: url(./back.jpg);
+    background-color: #26262652;
+    background-blend-mode: color-burn;
+    background-size: cover;
+}
+.addTask{
+    margin: 10px;
+    margin-top: 25vh;
+    border-bottom: 2px solid #666;
+    display: flex;
+    padding: 5px 0;
+}
+
+.addTask > input[type="text"]{
+    width: 90%;
+    color: rgb(87, 84, 84);
+    border: none;
+    background: none;
+    padding: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+.addTask button{
+    margin: 0 7px;
+    color: rgb(85, 83, 83);
+    
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.addTask button i:hover{
+    color: rgb(54, 53, 53);
+}
+
+.notCompleted, .Completed{
+    margin: 5px 0;
+    padding: 10px;
+}
+h3{
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(83, 80, 80);
+
+}
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+    position: relative;
+}
+
+ol li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    margin: 3px 0;
+    background: #fa000015;
+    font-size: 15px;
+    border-radius: 5px;
+    counter-increment: my-counter;
+}
+ol.Completed li{ 
+    background: #00ff623d;
+
+}
+
+ol li::before{
+    content: counter(my-counter);
+    background: #1b049e75;
+    width: 1rem;
+    height: 1rem;
+    padding: 3px;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 1rem;
+    text-align: center;
+    color: #fff;
+    margin-right: .3rem;
+}
+.editInput{
+    width: max-content;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin: 5px 0;
+    background: transparent;
+    font-size: 15px;
+    color: rgb(61, 61, 61);
+}
+li button{
+    padding: 3px;
+    font-size: 18px;
+    line-height: 12px;
+    margin-right: 7px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(80, 79, 79);
+}
+li button:first-child:hover{
+    color: rgb(0, 252, 13);
+}
+li button:nth-child(2):hover{
+    color: rgb(255, 30, 0);
+}
+li button:nth-child(3):hover{
+    color: rgb(0, 81, 255);
+}
+li button:nth-child(4):hover{
+    color: rgb(255, 94, 0);
+}
+
+.todoAction{
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    display: flex;
+    align-items: center;
+}
